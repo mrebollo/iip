@@ -30,7 +30,7 @@ public class Carta {
         return (this.palo < c.palo) || (this.palo == c.palo && this.valor < c.valor);
     }
 
-    public Carta sigPalo() { return new Carta((palo+1)%4, valor); }
+    public Carta sigPalo() { return new Carta((palo+1) % 4, valor); }
 
     public boolean equals(Object o) {
         return o instanceof Carta &&

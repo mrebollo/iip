@@ -44,7 +44,8 @@ public class Astro {
     public double magnitudAbsoluta() { return brillo + 5 * Math.log10(distancia); }
 
     public int masBrillante(Astro otro) {
-        double magAbsThis = this.magnitudAbsoluta(), magAbsOtro = otro.magnitudAbsoluta();
+        double magAbsThis = this.magnitudAbsoluta();
+        double magAbsOtro = otro.magnitudAbsoluta();
         int res = 0;
         if (magAbsThis>magAbsOtro) res = 1;
         else if (magAbsThis<magAbsOtro) res = -1;
@@ -53,6 +54,8 @@ public class Astro {
 
     public String visibleCon() {
         if (brillo<5) return "a simple vista";
-        else if (brillo<7) return "con prism ́aticos"; else if (brillo<=25) return "con telescopio"; else return "con grandes telescopios";
+        else if (brillo<7) return "con prismáticos"; 
+        else if (brillo<=25) return "con telescopio"; 
+        else return "con grandes telescopios";
     } 
 }

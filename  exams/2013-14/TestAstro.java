@@ -24,7 +24,7 @@ public class TestAstro {
         int brillaMas = uno.masBrillante(dos);
         switch(brillaMas) {
             case 0: System.out.println(uno + " y " + dos + " brillan igual"); break; case 1: System.out.println(uno + " brilla m ́as que " + dos); break;
-            case -1: System.out.println(dos + " brilla m ́as que " + uno);
+            case -1: System.out.println(dos + " brilla más que " + uno);
         }
     }
 }

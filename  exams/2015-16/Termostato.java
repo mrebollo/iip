@@ -43,7 +43,7 @@ public class Termostato {
     
     public String toString() {
         String m = "refrigeracion";
-        if (this.modo == CALOR) { m = "calefaccion"; }
+        if (this.modo == CALOR) { m = "calefacción"; }
         return nombre + ", modo " + m + ", TConfort = " + tConfort 
                + ", TActual = " + tActual;
     }   

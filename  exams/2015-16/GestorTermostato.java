@@ -25,7 +25,7 @@ public class GestorTermostato {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in).useLocale(Locale.US);    
         // Lee de teclado los datos del termostato 
-        System.out.print("Modo del termostato (refrigeracion/calefaccion): ");
+        System.out.print("Modo del termostato (refrigeración/calefacción): ");
         String modo = teclado.next().trim().toLowerCase();
         int cModo = Termostato.FRIO;
         if (modo.equals("calefaccion")) { cModo = Termostato.CALOR; }
