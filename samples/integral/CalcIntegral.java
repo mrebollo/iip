@@ -24,6 +24,7 @@ public class CalcIntegral {
         int numInterval = input.nextInt();
 
         Integral laIntegral = new Integral(a, b);
+        laIntegral.dibujar();
         double valorInt = laIntegral.resolver(numInterval);
         System.out.println( laIntegral.toString() + " = " + valorInt );
     }//main()

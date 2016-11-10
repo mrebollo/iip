@@ -1,8 +1,10 @@
+import graph2D.*;
+import java.awt.Color;
 /**
- * Integral definida de una función.
+ * Integral definida de una función. Represetación gráfica
  * 
  * @author IIP 16-17 (@mrebollo) 
- * @version 1.0
+ * @version 2.0
  * @since 20161102
  */
 public class Integral
@@ -11,6 +13,8 @@ public class Integral
     private Funcion f;
     /** intervalo en el que se define la integral */
     private Intervalo interv;
+    /** gráfico para representar la función */
+    Graph2D grafico;
 
     /**
      * Constructor general: define una integral en el intervalo que se pasa
@@ -46,8 +50,12 @@ public class Integral
         //System.out.printf( "-----------------------------------------------\n" );
         for (double x = interv.getInf(); x <= interv.getSup(); 
             x += step) {
-            rect.setRectangulo(step, f.eval(x));
+            double y = f.eval(x);
+            rect.setRectangulo(step, y);
             areaRect += rect.area();
+            if (grafico != null) {
+                grafico.drawRect(x,y,step,y,Color.CYAN,2);
+            }
             //System.out.printf( "%.5f\t%.5f\t%.5f\t%.5f\t%.5f\n", 
             //    x, x+step, f.eval(x), rect.area(), areaRect );
         } //for
@@ -55,7 +63,29 @@ public class Integral
         //System.out.println( "\nIntegral (mét rectángulos) " + areaRect);
         return areaRect;
     }
-
+    
+    /**
+     * representa gráficamente la función en el intervalo
+    */
+    public void dibujar(){
+        double xMin = interv.getInf();
+        double xMax = interv.getSup();
+        /* los valores mínimo y máximo de y dependerán de la función
+         * y hay que estudiarlos
+         */
+        double yMin = -1.10;
+        double yMax = +1.10;
+        int windowMax =  600;
+        
+        grafico = new Graph2D(xMin, xMax , yMin, yMax, windowMax, windowMax);
+                                    
+        double delta = (xMax - xMin) / Graph2D.INI_WIDTH;   
+        for (double x = xMin; x <= xMax; x = x + delta) {
+            double y = f.eval(x);
+            grafico.drawPoint(x, y, Color.BLUE, 2);
+        }
+    }
+    
     /**
      * Método toString para obtener una representación de la integral
      * (no estaba en el enunciado, pero es más cómodo)
