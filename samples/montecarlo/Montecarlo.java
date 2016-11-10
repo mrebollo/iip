@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 /**
  * Cálculo de pi por el método de Montacarlo.
@@ -6,8 +7,6 @@
  * @version 1.0
  * @since 20161028
  */
-
-import java.util.Scanner;
 
 public class Montecarlo
 {
