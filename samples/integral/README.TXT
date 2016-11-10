@@ -9,11 +9,11 @@ PROJECT TITLE:	Integral
 PURPOSE OF PROJECT:
 Programa en Java que aproxima el valor de la integral de una función mediante el método de los rectángulos.
 
-El método consiste en aproximar el área debajo de la función dividiendo el área en un conjunto de rectángulos cuya altura es el valor de la función en algún punto (ver la explicación en el documento integral.pdf)
+El método consiste en aproximar el área debajo de la función dividiendo el área en un conjunto de rectángulos cuya altura es el valor de la función en algún punto (ver la explicación en el documento integral.pdf). La versión actual incluye la representación gráfica de la función y de los rectángulos
 
 El propósito del proyecto es aprender a usar clases como atributos de otras clases, por lo que la solución puede simplificarse. 
 
-VERSION or DATE: 1.0 (Oct 2016)
+VERSION or DATE: 2.0 (Nov 2016)
 
 HOW TO START THIS PROJECT:
 Proyecto BlueJ. Abre el fichero package.bluej, compílalo y ejecuta el programa principal de la clase CalcIntegral.
